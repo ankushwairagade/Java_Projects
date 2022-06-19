@@ -1,5 +1,5 @@
 package BlackJack;
 
 public enum Suit {
-    clubs,diamonds,hearts,spades;
+    HEART,DIAMOND,CLUB,SPADE;
 }

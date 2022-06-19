@@ -366,7 +366,7 @@ public class phonebook {
 
 
 
-
+// try N error
 /*
         for(Iterator<Entries> itr = read.iterator();
          itr.hasNext();){
@@ -382,7 +382,10 @@ public class phonebook {
 
         }*/
 
-        boolean loop=true;
+        // the code and everything was to complex and mess up I come up with better and optimized sol to do same work
+        // user convince and clean everything
+
+   /*     boolean loop=true;
         while(loop)
         {
             System.out.println(" !!!!!!   Select Remove Parameter  !!!!!");
@@ -511,6 +514,58 @@ public class phonebook {
                 }
         }
 
+*/
+
+        int check=0;
+        for(Iterator<Entries> itr = read.iterator(); itr.hasNext();) {
+
+            Entries e = itr.next();
+
+            if (e.getFirstName().equals(str)) {
+                itr.remove();
+                System.out.println(e);
+                System.out.println(" Remove Successfully \n\n\n");
+                check = 1;
+                break;
+            }
+
+            if(e.getLastName().equals(str)) {
+                itr.remove();
+                System.out.println(e);
+                System.out.println(" Remove Successfully \n\n\n");
+                check=1;
+                break;
+            }
+
+            if(e.getPhoneNumber().equals(str))
+            {   itr.remove();
+                System.out.println(e);
+                System.out.println(" Remove Successfully \n\n\n");
+                check=1;
+                break;
+            }
+
+            if(e.getAddress().equals(str))
+            {   itr.remove();
+                System.out.println(e);
+                System.out.println(" Remove Successfully \n\n\n");
+                check=1;
+                break;
+            }
+
+            if(e.getEmailAddress().equals(str))
+            {   itr.remove();
+                System.out.println(e);
+                System.out.println(" Remove Successfully \n\n\n");
+                check=1;
+                break;
+            }
+
+        }
+
+        if(check==0) {
+            System.out.println(" Value NOT Matched with Any Field   : '"+str+ "'");
+        }
 
 
 
